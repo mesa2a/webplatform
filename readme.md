@@ -55,8 +55,8 @@ Laravel Permissionを使うことで実装のハードルが下がるか？
 - email
 - google_id　グーグル認証から提供されるユーザーID
 - google_profile　グーグル認証から渡されるプロファイル
-- role_id　指導員、訓練生のロール
-- course_id　訓練コース
+- role_id (foreign key)　指導員、訓練生のロール
+- course_id (foreign key)　訓練コース
 
 ### rolesテーブル
 - role_id (primary)
@@ -75,16 +75,21 @@ Laravel Permissionを使うことで実装のハードルが下がるか？
 ### lessonsテーブル
 - lesson_id (primary)
 - lesson_title　講座名　配列の基礎とか
-- module_id　外部キー
+- unit_id (foreign key)
 - description　講座の概要
 - content　講座の内容（mdファイルを追加する？）
 - difficulty　講座の難易度
 - category　カテゴリー htmlとかJavaScriptとかデザインとか
-- lesson_achievement　講座でできるようになったこと
+- achievement_id (foreign key)　講座でできるようになったこと
 - is_draft　下書き状態かどうかを管理
+
+### achievementsテーブル
+- achievement_id (primary key)
+- achievement_name
 
 ### unitsテーブル
 - unit_id (primary)
+- module_id (foreign key)
 - unit_name　単元名　JavaScript初級編とか
 - unit_achievement　単元でできるようになったこと
 
