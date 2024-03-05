@@ -37,7 +37,7 @@ Webコースで行っている訓練を整理し、学習プラットフォー�
 - 下書き状態のものは訓練生に表示させない。
 
 ### ロール
-Laravel Permissionを使うことで実装のハードルが下がるか？
+Laravel Permissionを使うことで実装のハードルが下がる？
 
 #### 指導員
 - 自分が作成したモジュール、単元、講座を作成、編集、削除することができる。
@@ -75,6 +75,8 @@ Laravel Permissionを使うことで実装のハードルが下がるか？
 ### lessonsテーブル
 - lesson_id (primary)
 - lesson_title　講座名　配列の基礎とか
+- created_at　作成日
+- updated_at　修正日
 - unit_id (foreign key)
 - description　講座の概要
 - content　講座の内容（mdファイルを追加する？）
